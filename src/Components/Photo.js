@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Photo(props) {
+    console.log(props.postData)
     const  postData = props.postData
     return <figure className="figure">
         <img className="photo" src={postData.imageLink} alt={postData.description}/>
@@ -17,7 +18,6 @@ function Photo(props) {
 
 Photo.propType = {
     postData: PropTypes.object.isRequired,
-    onRemovePhoto: PropTypes.func.isRequired
 }
 
 export default Photo;
