@@ -11,7 +11,7 @@ function PhotoWall(props) {
                 sort(function (x,y) {
                     return y.id - x.id
             }).map((post) =>
-                <Photo key={post.id} postData={post} onRemovePhoto={props.onRemovePhoto}/>
+                <Photo key={post.id} postData={post} {...props}/>
             )}
         </div>
     </div>
